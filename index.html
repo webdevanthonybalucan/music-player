@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artist Albums Owl Carousel</title>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+<!-- --------icons--------- -->
+<script src="https://kit.fontawesome.com/6bb0da0300.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <div class="container">
+      <div class="media-player">
+          <div>
+              <div class="player-image">
+                  <img src="https://i.imgur.com/G5PTKYf.png" alt="">
+                  <img src="https://i.imgur.com/JaocQ2t.png" alt="">
+              </div>
+              <div class="song-title">
+                  <h1>All Too Well (Tailor's Version)</h1>
+                  <p>Taylor Swift</p>
+              </div>
+
+              <div id="progress">
+                  <div id="time-stamp">
+                    <p id="current-time">0:00</p>
+                    <p id="duration">10:13</p>
+                  </div>
+                  <input type="range" value="0" id="progress-bar">
+              </div>
+
+              <audio id="song">
+                <source src="https://drive.google.com/uc?export=download&id=1tw6C5lwONRDtkR9H0Pnf51GoFZony9d6" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+
+              <div class="controls">
+                  <i class="fa-solid fa-backward-step"></i>
+                  <div onclick="playPause()" id="play-pause"><i class="fa-solid fa-play" id ="ctrlIcon"></i></div>
+                  <i class="fa-solid fa-forward-step"></i>
+              </div>
+          </div>
+    </div>
+    <div >
+      <h1 id="explore">Explore</h1>
+      <div class="selection">
+          <p class="lyrics-tab bold" >Lyrics</p>
+          <p class="other-album-tab">Other Album</p>
+          <p class="related-artist-tab">Related Artist</p>
+        </div>
+
+        <div class="show">
+          <div class="lyrics-container">
+            <p id="songLyrics"></p>
+          </div>
+          <div class="other-album-container" style="display: none;">
+              <section id="other-albums">
+                  <div id="album-list" class="owl-carousel">
+                      <!-- Album cards will be populated here -->
+                    </div>
+                </section>
+          </div>
+          <div class="related-artist-container" style="display: none;">
+              <section id="related-artist">
+                  <div class="related-artists-carousel owl-carousel">
+                    <!-- Related Artist images and names will be populated here -->
+                  </div>
+                </section>
+            </div>
+        </div>
+  </div>
+  </div>
+
+
+  <script src="player.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+</body>
+</html>
